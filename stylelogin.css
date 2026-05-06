@@ -1,0 +1,132 @@
+/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; 
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #f8fafc;
+}
+
+
+.interface-principal {
+  display: flex;
+  min-height: 100vh;
+  width: 100%;
+}
+
+/* 2. LADO ESQUERDO (A IMAGEM) */
+.lado-imagem {
+  flex: 1.2; /* Ocupa 60% da largura */
+  /* Aplicando a imagem corretamente via CSS */
+  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
+              url('images (1).jpg'); 
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  padding: 5vw;
+  color: white;
+}
+
+.texto-marketing h1 {
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  margin-bottom: 1rem;
+}
+
+/* 3. LADO DIREITO (O FORMULÁRIO) */
+.lado-formulario {
+  flex: 0.8; /* Ocupa 40% da largura */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.cartao-login {
+  width: 100%;
+  max-width: 420px;
+  background: white;
+  padding: 40px;
+  border-radius: 24px;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+.cartao-login h2 {
+  margin-bottom: 30px;
+  color: #1e293b;
+  text-align: center;
+}
+
+/* ESTILO DOS CAMPOS */
+.caixa-entrada {
+  margin-bottom: 20px;
+}
+
+.caixa-entrada label {
+  display: block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #64748b;
+  margin-bottom: 8px;
+}
+
+.caixa-entrada input {
+  width: 100%;
+  padding: 12px 16px;
+  border: 2px solid #e2e8f0;
+  border-radius: 12px;
+  outline: none;
+  transition: 0.3s;
+}
+
+.caixa-entrada input:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.1);
+}
+
+/* BOTÃO */
+.botao-acesso {
+  width: 100%;
+  padding: 16px;
+  background: linear-gradient(135deg, #1e293b, #334155);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.botao-acesso:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.1);
+}
+
+.rodape-projeto {
+  margin-top: 30px;
+  text-align: center;
+  font-size: 0.75rem;
+  color: #94a3b8;
+}
+
+/* 4. RESPONSIVIDADE (PARA CELULAR) */
+@media screen and (max-width: 768px) {
+    .interface-principal {
+        flex-direction: column; 
+    }
+
+    .lado-imagem {
+        flex: none;
+        height: 35vh; 
+        padding: 30px;
+    }
+
+    .lado-formulario {
+        flex: none;
+        padding: 40px 20px;
+    }
+}
